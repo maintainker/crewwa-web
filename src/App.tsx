@@ -186,7 +186,7 @@ function App() {
       <table className="crewwa-table" style={{ border: "1px solid white" }}>
         <thead className="bg-gray-700">
           <tr>
-            <th className="px-4 py-3 text-white font-semibold">선수 이름</th>
+            <th className="px-4 py-3 text-white font-semibold">이름</th>
             <th className="px-4 py-3 text-white font-semibold">거리 (km)</th>
             <th className="px-4 py-3 text-white font-semibold">
               페이스 (분/km)
@@ -215,7 +215,13 @@ function App() {
               </td>
               <td className="px-4 py-3 text-white">{athlete.nextKm}</td>
               <td className="px-4 py-3 text-white text-sm">
-                {athlete.lastSeenAt.toLocaleString("ko-KR")}
+                {athlete.lastSeenAt !== "-" &&
+                  new Date(athlete.lastSeenAt).toLocaleTimeString("ko-KR", {
+                    hour: "numeric",
+                    minute: "numeric",
+                    second: "numeric",
+                  })}
+                {athlete.lastSeenAt === "-" && athlete.lastSeenAt}
               </td>
               <td className="px-4 py-3">
                 {athlete.isFinished ? (
