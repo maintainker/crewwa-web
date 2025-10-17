@@ -26,7 +26,10 @@ const tmpList = [
     name: "최율",
     bib: "21654",
   },
-  { name: "김용선", bib: "12138" },
+  {
+    name: "김용선",
+    bib: "12138",
+  },
   {
     name: "이상임",
     bib: "16567",
@@ -64,102 +67,94 @@ const tmpList = [
     bib: "16206",
   },
 ];
-const result = {
-  message: "Hello World",
-  data: [
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-    {
-      status: "fulfilled",
-      value:
-        '"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"\r\n"10002","2025-10-15 08:11:00.000","42.2","6","","10002","null","","Finish","","11","0","2025-10-15 08:11:00"\r\n',
-    },
-  ],
-};
+const result = `"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl","initials","overlay","next_km","StFhCp_Gbn","foul","ucpcount","next_dist","nextpasstime"
+"10513","2025-10-18 08:05:11.903","0","6","","10513","null","5","CP","","","5",""
+"10547","2025-10-18 08:05:22.493","0","6","","10547","null","5","CP","","","5",""
+"10706","2025-10-18 07:50:34.733","0","6","","10706","null","5","CP","","","5",""
+"10737","2025-10-18 08:05:11.927","0","6","","10737","null","5","CP","","","5",""
+"10739","2025-10-18 08:05:17.937","0","6","","10739","null","5","CP","","","5",""
+"10987","2025-10-18 08:05:30.557","0","6","","10987","null","5","CP","","","5",""
+"11171","2025-10-18 08:05:41.860","0","6","","11171","null","5","CP","","","5",""
+"11381","2025-10-18 08:05:11.927","0","6","","11381","null","5","CP","","","5",""
+"12138","2025-10-18 08:08:04.800","0","6","","12138","null","5","CP","","","5",""
+"13805","2025-10-18 08:10:46.743","0","6","","13805","null","5","CP","","","5",""
+"15043","2025-10-18 08:00:24.473","0","6","","15043","null","5","CP","","","5",""
+"16206","2025-10-18 08:08:07.577","0","6","","16206","null","5","CP","","","5",""
+"16450","2025-10-18 08:10:14.017","0","6","","16450","null","5","CP","","","5",""
+"16567","2025-10-18 08:10:14.073","0","6","","16567","null","5","CP","","","5",""
+`;
 
-function parseCSV(csvText: string, index: number): AthleteData | null {
-  const lines = csvText.trim().split("\r\n");
-  if (lines.length < 2) {
-    return {
-      id: tmpList[index].bib,
-      name: tmpList[index].name,
-      distance: 0,
-      pace: 0,
-      nextKm: "-",
-      lastSeenAt: "-",
-      isFinished: false,
-    };
+function parseCSV(csvText: string): AthleteData[] {
+  const lines = csvText.trim().split("\n");
+  let arr: AthleteData[] = [];
+  console.log(lines);
+  for (let i = 1; i < lines.length; i++) {
+    const values = lines[i]
+      .split(",")
+      .map((v) => v.trim().replace(/^"|"$/g, ""));
+
+    if (values.length < 9) {
+      arr.push({
+        id: tmpList[i - 1].bib,
+        name: tmpList[i - 1].name,
+        distance: 0,
+        pace: 0,
+        nextKm: "-",
+        lastSeenAt: "-",
+        isFinished: false,
+      });
+    }
+    const athleteId = values[0];
+    const athleteName =
+      tmpList.find((a) => a.bib === athleteId)?.name || tmpList[i - 1].name;
+    const paceMinPerKm = parseFloat(values[3]) || 0;
+    const isFinished =
+      values[8]?.toUpperCase() === "FINISH" || values[8]?.toUpperCase() === "F";
+    console.log(i - 1, tmpList);
+    arr.push({
+      id: athleteId,
+      name: athleteName,
+      distance: parseFloat(values[2]) || 0,
+      pace: paceMinPerKm,
+      nextKm: values[7] || "-",
+      lastSeenAt: new Date(values[1]),
+      isFinished: isFinished,
+    });
   }
+  return arr;
+  // if (lines.length < 2) {
+  //   return {
+  //     id: tmpList[index].bib,
+  //     name: tmpList[index].name,
+  //     distance: 0,
+  //     pace: 0,
+  //     nextKm: "-",
+  //     lastSeenAt: "-",
+  //     isFinished: false,
+  //   };
+  // }
 
-  const dataLine = lines[1];
-  const values = dataLine.split(",").map((v) => v.trim().replace(/^"|"$/g, ""));
+  // const dataLine = lines[1];
+  // const values = dataLine.split(",").map((v) => v.trim().replace(/^"|"$/g, ""));
 
-  if (values.length < 9) return null;
+  // if (values.length < 9) return null;
 
-  const athleteId = values[0];
-  const athleteName =
-    tmpList.find((a) => a.bib === athleteId)?.name || tmpList[index].name;
-  const paceMinPerKm = parseFloat(values[3]) || 0;
-  const isFinished =
-    values[8]?.toUpperCase() === "FINISH" || values[8]?.toUpperCase() === "F";
+  // const athleteId = values[0];
+  // const athleteName =
+  //   tmpList.find((a) => a.bib === athleteId)?.name || tmpList[index].name;
+  // const paceMinPerKm = parseFloat(values[3]) || 0;
+  // const isFinished =
+  //   values[8]?.toUpperCase() === "FINISH" || values[8]?.toUpperCase() === "F";
 
-  return {
-    id: athleteId,
-    name: athleteName,
-    distance: parseFloat(values[2]) || 0,
-    pace: paceMinPerKm,
-    nextKm: values[7] || "-",
-    lastSeenAt: new Date(values[1]),
-    isFinished: isFinished,
-  };
+  // return {
+  //   id: athleteId,
+  //   name: athleteName,
+  //   distance: parseFloat(values[2]) || 0,
+  //   pace: paceMinPerKm,
+  //   nextKm: values[7] || "-",
+  //   lastSeenAt: new Date(values[1]),
+  //   isFinished: isFinished,
+  // };
 }
 
 function App() {
@@ -168,12 +163,10 @@ function App() {
     const getDataList = async () => {
       console.log("데이터 가져오는중");
       const start = Date.now();
-      // const data = result;
+      // const data = { data: result };
       const { data } = await axios.get("https://race-api.vercel.app/api/race");
-
-      const parsedData = (data as typeof result).data.map((el, index) =>
-        parseCSV(el.value, index)
-      );
+      console.log(data.data);
+      const parsedData = parseCSV(data.data);
       console.log(parsedData);
       setAthletes(
         parsedData.filter((item): item is AthleteData => item !== null)
