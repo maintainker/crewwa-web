@@ -83,6 +83,7 @@ const result = `"id","lastSeenAt","lastSeenDistanceKm","paceMinPerKm","photoUrl"
 "16450","2025-10-18 08:10:14.017","0","6","","16450","null","5","CP","","","5",""
 "16567","2025-10-18 08:10:14.073","0","6","","16567","null","5","CP","","","5",""
 `;
+console.log(result);
 
 function parseCSV(csvText: string): AthleteData[] {
   const lines = csvText.trim().split("\n");
