@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import * as S from "./index.styled";
 import { useModal } from "../../../hooks";
 import { ViewPhotoModal } from "../../../components";
+import { useParams } from "react-router-dom";
 
 type Athlete = {
   id: number;
@@ -25,18 +26,27 @@ const formatPace = (pace: number | null) => {
 };
 const RaceListPage = () => {
   const [athletes, setAthletes] = useState<Athlete[]>([]);
+  const [loading, setLoading] = useState(true);
   const { openModal, closeModal } = useModal();
 
+  const { crewId, eventId } = useParams();
   const getUserList = async () => {
     try {
+      if (!crewId || !eventId) {
+        return;
+      }
       const { data } = await axios.get<Athlete[]>(
-        "https://race-api.vercel.app/api/cp-data?crewId=1&eventId=1"
+        `https://race-api.vercel.app/api/cp-data?crewId=${crewId}&eventId=${eventId}`
       );
-      console.log(data);
+      setLoading(false);
       setAthletes(data);
     } catch (error) {
       console.log(error);
     }
+  };
+  const reloadingData = () => {
+    setLoading(true);
+    getUserList();
   };
 
   useEffect(() => {
@@ -61,7 +71,9 @@ const RaceListPage = () => {
       {athletes.length > 0 && (
         <S.Content>
           <S.HeaderContainer>
-            <S.RefreshButton>새로고침</S.RefreshButton>
+            <S.RefreshButton disabled={loading} onClick={reloadingData}>
+              {loading ? "불러오기 중" : "새로고침"}
+            </S.RefreshButton>
           </S.HeaderContainer>
           <S.Table className="crewwa-table w-full border border-white mt-4">
             <thead className="bg-gray-700">
