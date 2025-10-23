@@ -10,6 +10,9 @@ const ViewPhoto = ({ onClose, imageUrl }: Props) => {
     <>
       <S.Dim onClick={onClose} />
       <S.ImageContainer>
+        <S.CloseButton onClick={onClose}>
+          <span>닫기</span>
+        </S.CloseButton>
         <S.Image src={imageUrl} alt="이미지" />
       </S.ImageContainer>
     </>

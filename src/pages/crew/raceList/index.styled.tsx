@@ -24,7 +24,6 @@ export const HeaderContainer = styled.div`
 `;
 
 export const RefreshButton = styled.button`
-  width: 80px;
   font-size: 12px;
 `;
 
