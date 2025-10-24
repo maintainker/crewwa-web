@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 
 type Athlete = {
   id: number;
+  bib: string;
   eventId: number;
   eventName: string;
   lastSeenAt: string | null;
@@ -16,6 +17,7 @@ type Athlete = {
   photoUrl: string | null;
   crewId: number;
   userName: string;
+  lastSeenCpName: string;
 };
 const formatPace = (pace: number | null) => {
   if (pace === null) return "-";
@@ -50,6 +52,7 @@ const RaceListPage = () => {
   };
 
   useEffect(() => {
+    console.log("getdata");
     getUserList();
   }, []);
 
@@ -79,8 +82,9 @@ const RaceListPage = () => {
             <thead className="bg-gray-700">
               <tr>
                 <th className="px-4 py-3 text-white font-semibold">이름</th>
+                <th className="px-4 py-3 text-white font-semibold">배번</th>
                 <th className="px-4 py-3 text-white font-semibold">
-                  거리 (km)
+                  체크포인트
                 </th>
                 <th className="px-4 py-3 text-white font-semibold">
                   페이스 (분/km)
@@ -93,7 +97,7 @@ const RaceListPage = () => {
             </thead>
             <tbody>
               {athletes.map((athlete, index) => {
-                const distance = formatPace(athlete.lastSeenDistanceKm);
+                const distance = athlete.lastSeenCpName ?? "-";
                 const pace =
                   athlete.paceMinPerKm !== null ? athlete.paceMinPerKm : "-";
                 const lastSeen =
@@ -113,6 +117,7 @@ const RaceListPage = () => {
                     <td className="px-4 py-3 text-white font-semibold">
                       {athlete.userName}
                     </td>
+                    <td className="px-4 py-3 text-white">{athlete.bib}</td>
                     <td className="px-4 py-3 text-white">{distance}</td>
                     <td className="px-4 py-3 text-white">{pace}</td>
                     <td className="px-4 py-3 text-white text-sm">{lastSeen}</td>
