@@ -19,13 +19,6 @@ type Athlete = {
   userName: string;
   lastSeenCpName: string;
 };
-const formatPace = (pace: number | null) => {
-  if (pace === null) return "-";
-  const min = Math.floor(pace);
-  const sec = Math.round((pace - min) * 60);
-  const formattedSec = sec.toString().padStart(2, "0");
-  return `${min}'${formattedSec}"`;
-};
 const RaceListPage = () => {
   const [athletes, setAthletes] = useState<Athlete[]>([]);
   const [loading, setLoading] = useState(true);
